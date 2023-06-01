@@ -1,9 +1,8 @@
-
-
 const mailchimp = (req, res) => {
     const firstName = req.body.fname;
     const lastName = req.body.lname;
     const email = req.body.email;
+    
 
     const client = require("@mailchimp/mailchimp_marketing");
       client.setConfig({
@@ -23,6 +22,7 @@ const mailchimp = (req, res) => {
           }}],
         });
         console.log(response.total_created, response.error_count);
+        
         if(response.total_created > 0){
           res.sendFile(__dirname + '/success.html');
         } 
@@ -32,6 +32,7 @@ const mailchimp = (req, res) => {
         else {
           res.sendFile(__dirname + '/failure.html')
         }
+        
       };
       run();
       
