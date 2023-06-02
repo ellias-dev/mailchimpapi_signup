@@ -1,11 +1,13 @@
-"use strict"
+
 require('dotenv').config();
 const express = require('express');
 const app = express();
 const { mailchimp } = require('./mailchimp');
+const bodyParser = require('body-parser');
 const PORT = 3000;
 
 app.use(express.static('static'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html');

@@ -1,7 +1,12 @@
+const sanitizeHtml = require('sanitize-html');
+
 const mailchimp = (req, res) => {
-    const firstName = req.body.fname;
-    const lastName = req.body.lname;
-    const email = req.body.email;
+    const firstName = sanitizeHtml(req.body.fname);
+    const lastName = sanitizeHtml(req.body.lname);
+    const email = sanitizeHtml(req.body.email);
+
+    console.log(firstName, lastName, email);
+    
     
 
     const client = require("@mailchimp/mailchimp_marketing");
