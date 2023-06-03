@@ -7,8 +7,6 @@ const mailchimp = (req, res) => {
 
     console.log(firstName, lastName, email);
     
-    
-
     const client = require("@mailchimp/mailchimp_marketing");
       client.setConfig({
         apiKey: process.env.MAILCHIMP_API,

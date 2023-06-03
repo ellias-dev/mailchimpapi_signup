@@ -4,8 +4,10 @@ const express = require('express');
 const app = express();
 const { mailchimp } = require('./mailchimp');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const PORT = 3000;
 
+app.use(helmet());
 app.use(express.static('static'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
