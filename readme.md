@@ -11,7 +11,7 @@ There are a few more dependencies, including the ones for security, that are lis
 ## Installation & Configuration
 1. Make a local copy:
 ```
-git clone bla-bla-bla
+git clone https://github.com/ellias-dev/mailchimpapi_signup 
 ```
 2. Install all necessary dependencies:
 ```
