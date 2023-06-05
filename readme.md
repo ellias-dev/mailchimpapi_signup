@@ -27,3 +27,6 @@ npm install
 3. dotenv - to use environmental variables to store credentials (security, you know)
 4. helmet - to protect requests' heads
 5. sanitize-html - to sanitize user inputs
+
+## Other notes
+The Mailchimp API code is placed into a separate file, and well-commented. Please, read comments or/and refer to Mailchimp API documentation in case you want to modify anything.
